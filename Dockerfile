@@ -78,7 +78,7 @@ USER nobody
 WORKDIR /var/www/
 
 # TODO set port by env
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
