@@ -36,12 +36,17 @@ RUN apk --no-cache add php7 \
     php7-pgsql \
     php7-odbc \
     php7-gd \
+    php7-tokenizer \
     nginx \
     supervisor \
     curl \
     php7-gd \
     php7-opcache \
-    php7-zip
+    php7-zip \
+    pcre-dev \
+    php7-iconv \
+    php7-bcmath
+
 
 
 RUN pecl install apcu \
