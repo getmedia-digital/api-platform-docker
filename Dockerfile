@@ -31,6 +31,8 @@ RUN apk --no-cache add php7 \
     php7-ctype \
     php7-session \
     php7-mbstring \
+    php7-pdo \
+    php7-pdo_pgsql \
     php7-pgsql \
     php7-odbc \
     php7-gd \
