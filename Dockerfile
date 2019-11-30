@@ -52,6 +52,8 @@ RUN apk --no-cache add php7 \
 RUN pecl install apcu \
     && pecl install yaml
 
+COPY .docker/resolv.conf /etc/resolv.conf
+
 # Nginx config
 COPY .docker/nginx/nginx.conf /etc/nginx/nginx.conf
 
