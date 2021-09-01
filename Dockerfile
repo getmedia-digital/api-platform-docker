@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.14
 LABEL Maintainer="Pavel Janku <pavel@getmedia.digital>" \
       Description="Lightweight container with Nginx for API Platform."
 
@@ -64,10 +64,10 @@ COPY .docker/php/php.ini /etc/php7/conf.d/zzz_custom.ini
 # supervisord config
 COPY .docker/supervisord/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-RUN chown -R nobody.nobody /run && \
-  chown -R nobody.nobody /var/lib/nginx && \
-  chown -R nobody.nobody /var/tmp/nginx && \
-  chown -R nobody.nobody /var/log/nginx
+#RUN chown -R nobody.nobody /run && \
+#  chown -R nobody.nobody /var/lib/nginx && \
+#  chown -R nobody.nobody /var/tmp/nginx && \
+#  chown -R nobody.nobody /var/log/nginx
 
 # Document root for Nginx
 RUN mkdir -p /var/www
